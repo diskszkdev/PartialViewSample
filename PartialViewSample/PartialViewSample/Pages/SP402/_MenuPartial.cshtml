@@ -1,0 +1,13 @@
+﻿@model List<string>
+
+<table class="table table-striped">
+    <thead>
+        <tr><th>メニュー名</th></tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr><td>@item</td></tr>
+        }
+    </tbody>
+</table>

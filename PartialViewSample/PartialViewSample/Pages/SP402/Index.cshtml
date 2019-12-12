@@ -1,0 +1,20 @@
+﻿@page
+@model PartialViewSample.Pages.SP402.IndexModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>部分ビューサンプル</h2>
+<button id="btn-display" type="button" class="btn btn-primary">表示</button>
+<div id="area"></div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(function () {
+            $('#btn-display').on('click', function () {
+                $('#area').load('./SP402/Index?handler=MenuPartial');
+
+            })
+        });
+    </script>
+}
